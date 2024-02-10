@@ -14,6 +14,9 @@ class ManageUsers extends ManageRecords
     {
         return [
             Actions\CreateAction::make(),
+
+            Actions\ImportAction::make()
+                ->importer(\App\Filament\Imports\UserImporter::class),
         ];
     }
 }
